@@ -31,6 +31,7 @@ spec:
     - /usr/local/bin/s2i
     - --loglevel=$(inputs.params.LOGLEVEL)
     - build
+    - -e S2I_SOURCE_NOTEBOOK_LIST=$(inputs.params.S2I_SOURCE_NOTEBOOK_LIST)
     - $(inputs.params.PATH_CONTEXT)
     - $(inputs.params.BUILDER_IMAGE)
     - --as-dockerfile
