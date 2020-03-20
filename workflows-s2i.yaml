@@ -22,7 +22,7 @@ spec:
     resources:
     - name: source
       type: git
- outputs:
+  outputs:
     resources:
     - name: image
       type: image
