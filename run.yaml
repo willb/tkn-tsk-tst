@@ -19,7 +19,7 @@ spec:
         - name: url
           value: https://github.com/willb/ml-workflows-notebook
         - name: revision
-          value: deploy
+          value: develop
   outputs:
     resources:
     - name: image
