@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1alpha1
 kind: TaskRun
 metadata:
-  name: s2i-nodejs-taskrun
+  name: s2i-nb-taskrun
 spec:
   # Use service account with git and image repo credentials
   serviceAccountName: pipeline
@@ -16,8 +16,8 @@ spec:
       resourceSpec:
         type: git
         params:
-        - name: uri
-          value: https://github.com/willb/openshift-ml-workflows-workshop
+        - name: url
+          value: https://github.com/willb/ml-workflows-notebook
         - name: ref
           value: develop
   outputs:
