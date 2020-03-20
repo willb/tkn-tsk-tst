@@ -39,9 +39,7 @@ spec:
     image: quay.io/openshift-pipeline/s2i:nightly
     name: generate
     volumeMounts:
-    - mountPath: /gen-source
-      name: gen-source
-    workingDir: /workspace/source
+    workingDir: /opt/sms
   - command:
     - buildah
     - bud
