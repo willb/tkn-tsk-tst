@@ -17,9 +17,7 @@ spec:
         type: git
         params:
         - name: url
-          value: https://github.com/willb/ml-workflows-notebook
-        - name: ref
-          value: develop
+          value: https://github.com/willb/ml-workflows-notebook/tree/develop
   outputs:
     resources:
     - name: image
