@@ -1,0 +1,27 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TaskRun
+metadata:
+  name: s2i-nodejs-taskrun
+spec:
+  # Use service account with git and image repo credentials
+  serviceAccountName: pipeline
+  taskRef:
+    name: simple-model-s2i
+  inputs:
+    params:
+	- name: BUILDER_IMAGE
+	  value: quay.io/willbenton/simple-model-s2i:cached-pipeline-s2i
+    resources:
+    - name: source
+      resourceSpec:
+        type: git
+        params:
+        - name: uri
+          value: https://github.com/willb/openshift-ml-workflows-workshop
+        - name: ref
+          value: develop
+  outputs:
+    resources:
+    - name: image
+      resourceSpec:
+        type: image
