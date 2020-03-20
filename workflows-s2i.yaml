@@ -39,9 +39,7 @@ spec:
     image: $(inputs.params.BUILDER_IMAGE)
     name: generate
     volumeMounts:
-    - mountPath: /gen-source
-      name: gen-source
-    workingDir: /workspace/source
+    workingDir: /opt/sms
   - command:
     - buildah
     - bud
