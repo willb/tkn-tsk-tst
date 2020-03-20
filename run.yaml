@@ -21,9 +21,8 @@ spec:
   outputs:
     resources:
     - name: image
-	resourceSpec:
+      resourceSpec:
         type: image
         params:
-        -name: url
-        value: image-registry.openshift-image-registry.svc:5000/opendatahub-user1/simple-model-s2i
-		
+        - name: url
+          value: image-registry.openshift-image-registry.svc:5000/opendatahub-user1/simple-model-s2i
