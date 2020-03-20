@@ -21,7 +21,7 @@ spec:
       default: 03-feature-engineering-tfidf.ipynb,04-model-logistic-regression.ipynb
     resources:
     - name: source
-	  type: git
+      type: git
  outputs:
     resources:
     - name: image
