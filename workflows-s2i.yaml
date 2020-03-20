@@ -7,7 +7,7 @@ spec:
     params:
     - description: The location of the s2i builder image.
       name: BUILDER_IMAGE
-	  value: quay.io/willbenton/simple-model-s2i:cached-pipeline-s2i
+	  default: quay.io/willbenton/simple-model-s2i:cached-pipeline-s2i
     - default: .
       description: The location of the path to run s2i from.
       name: PATH_CONTEXT
@@ -22,12 +22,13 @@ spec:
       default: 03-feature-engineering-tfidf.ipynb,04-model-logistic-regression.ipynb
     resources:
     - name: source
-		type: git
-		params:
-		- name: uri
-		  value: https://github.com/willb/openshift-ml-workflows-workshop
-		- name: ref
-		  value: develop
+	  resourceSpec:
+		  type: git
+		  params:
+          - name: uri
+		    value: https://github.com/willb/openshift-ml-workflows-workshop
+		  - name: ref
+		    value: develop
   outputs:
     resources:
     - name: image
