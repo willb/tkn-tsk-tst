@@ -9,8 +9,8 @@ spec:
     name: simple-model-s2i
   inputs:
     params:
-	- name: BUILDER_IMAGE
-	  value: quay.io/willbenton/simple-model-s2i:cached-pipeline-s2i
+    - name: BUILDER_IMAGE
+      value: quay.io/willbenton/simple-model-s2i:cached-pipeline-s2i
     resources:
     - name: source
       resourceSpec:
